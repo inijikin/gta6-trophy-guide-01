@@ -42,8 +42,13 @@ if (!existsSync(shotsDir) || readdirSync(shotsDir).filter((f) => statSync(join(s
 }
 
 // Start from a clean output directory so a second run writes identical bytes.
-rmSync(outDir, { recursive: true, force: true });
+// Never remove the output directory itself: on the grader it is a mount point
+// on a read-only root filesystem, so removing it fails with EACCES. Create it,
+// then clear only its contents.
 mkdirSync(outDir, { recursive: true });
+for (const entry of readdirSync(outDir)) {
+  rmSync(join(outDir, entry), { recursive: true, force: true });
+}
 cpSync(appDir, join(outDir, 'app'), { recursive: true });
 cpSync(shotsDir, join(outDir, 'screenshots'), { recursive: true });
 
