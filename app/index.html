@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ff2e88'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='19' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: cited guides, roadmap to the platinum, missable flags, spoiler-safe checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-title">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="subtitle">The offline trophy guide &amp; tracker — every trophy with its official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that remembers you.</p>
+  </div>
+  <div class="progress-card" id="progressCard" aria-label="Overall progress">
+    <p class="progress-big"><span id="earnedCount">0</span><span class="progress-of"> / 55</span></p>
+    <p class="progress-pct" id="earnedPct">0% to the platinum</p>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBarWrap"><div class="bar-fill" id="progressFill" style="width:0%"></div></div>
+    <ul class="grade-bars" id="gradeBars"></ul>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" class="view-tab active" data-view="guide" id="tabGuide">Guide &amp; tracker</button>
+  <button type="button" class="view-tab" data-view="roadmap" id="tabRoadmap">Roadmap to platinum</button>
+  <button type="button" class="view-tab" data-view="progress" id="tabProgress">Progress &amp; backup</button>
+</nav>
+
+<main>
+<section id="view-guide" class="view active" aria-label="Guide and tracker">
+  <div class="toolbar">
+    <label class="search-box">Search <input id="search" type="search" placeholder="Trophy name, mission, place…" autocomplete="off"></label>
+    <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+    <label class="select-box">Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" id="earnedOnly"> Earned only</label>
+    <label class="check spoiler"><input type="checkbox" id="spoilerToggle" checked> Hide story spoilers</label>
+    <div class="io-buttons">
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button type="button" id="resetBtn" class="danger">Reset</button>
+    </div>
+  </div>
+  <p class="result-line" id="resultLine"></p>
+  <div class="guide-grid">
+    <div class="list-wrap">
+      <ol class="trophy-list" id="trophyList"></ol>
+    </div>
+    <aside class="detail" id="detailPanel" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section id="view-roadmap" class="view" aria-label="Roadmap to platinum">
+  <div class="roadmap-intro">
+    <h2>Roadmap to the platinum — about 200 hours, one playthrough</h2>
+    <p>Guides put the platinum at difficulty 4/10 and about 200 hours: 60–80 hours of story, about 100 hours on the 100% checklist, and 10 hours of Strangers &amp; Freaks and clean-up. There are <strong>no online trophies</strong>, no difficulty settings, no New Game+, and no mission replay — but free-roam continues after the story, and everything for the platinum stays available there. Keep a manual save at the start and end of each chapter (15 manual slots): you cannot replay a mission. <strong>Cheats disable trophies and saving</strong>, so keep them off a trophy run.</p>
+  </div>
+  <div class="missable-callout" id="missableCallout">
+    <h3>⚠ The one trophy you can miss</h3>
+    <p><strong>Positive Mental Attitude</strong> is the only trophy the guides flag as potentially missable. The first meditation, at Jason&rsquo;s house in Chapter 1, can only be done in Chapter 1: after the mission <em>Down to Earth</em>, talk to Lucia in the kitchen in the morning — she says she is going to meditate — follow her to the balcony and choose <em>Accept</em>. It adds +1 to your counter even though it is not marked as a Meditation Spot, and it is still unconfirmed whether it is required. Do it anyway: it costs a minute, and skipping it risks the platinum.</p>
+    <p class="callout-source">Source: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" target="_blank" rel="noopener">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a> · also <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series" target="_blank" rel="noopener">GTABase</a></p>
+  </div>
+  <div class="steps" id="roadmapSteps"></div>
+  <div class="checklist-box">
+    <h3>What the 100% checklist actually asks for (A Long Road)</h3>
+    <p>The checklist unlocks after the story under Progress &gt; Stats &gt; 100% Completion. It is far more forgiving than true 100% — roughly 60% of everything:</p>
+    <ul>
+      <li>Every robbery: all 39 Illegal Gang Operations, all 8 large bank jobs, all 22 bank jobs and 7 Payday Loan jobs</li>
+      <li>Every underwater discovery, every shooting range gold, every drone race, all 15 of Bret&rsquo;s Target Decks</li>
+      <li>Any 70 of the 80 challenges (skip the hardest 10)</li>
+      <li>Any 100 optional missions (there are 200–300+; each meditation counts +2 if done with both characters)</li>
+      <li>Scan any 200 of 277 base-model vehicles; study any 100 of 255 animals with the binoculars</li>
+      <li>300 stunts; 15 of 18 meditations</li>
+    </ul>
+    <p class="callout-source">Source: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" target="_blank" rel="noopener">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a> · <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/" target="_blank" rel="noopener">KeenGamer</a></p>
+  </div>
+</section>
+
+<section id="view-progress" class="view" aria-label="Progress and backup">
+  <h2>Your progress</h2>
+  <div id="progressDetail"></div>
+  <h2>Backup &amp; restore</h2>
+  <p>Progress lives in this browser only (localStorage). Export a file before clearing browser data or switching devices, and import it back here — or on any other copy of this guide.</p>
+  <div class="io-buttons big">
+    <button type="button" id="exportBtn2">Export progress (.json)</button>
+    <label class="import-btn">Import progress <input id="importFile2" type="file" accept="application/json,.json"></label>
+    <button type="button" id="resetBtn2" class="danger">Reset all progress</button>
+  </div>
+  <p class="status-line" id="ioStatus" aria-live="polite"></p>
+</section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are PlayStation&rsquo;s own, as listed by <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" target="_blank" rel="noopener">Exophase</a> and <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" target="_blank" rel="noopener">PowerPyx</a> (hidden flags follow Exophase / PSNProfiles). Guide facts come from <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" target="_blank" rel="noopener">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a>, <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series" target="_blank" rel="noopener">GTABase</a>, <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/" target="_blank" rel="noopener">KeenGamer</a> and <a href="https://insider-gaming.com/complete-gta-6-trophy-list-how-to-get-all-trophies-achievements/" target="_blank" rel="noopener">Insider Gaming</a>; each trophy&rsquo;s guide names its sources beside it. Every guide here is written in our own words — sources are cited, never copied.</p>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive or PlayStation. No Rockstar logo, artwork or game screenshots are used. Game content may change before or after release; where a method is still unconfirmed, the guide says so.</p>
+</footer>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
